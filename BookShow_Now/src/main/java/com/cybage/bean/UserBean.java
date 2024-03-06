@@ -11,7 +11,7 @@ public class UserBean {
 		// TODO Auto-generated constructor stub
 	}
 
-	public UserBean(String userName, String userEmail, String userPassword, String userPhone) {
+	public UserBean(String userName, String userEmail, String userPassword, String userPhone, String otp) {
 		super();
 		this.userName = userName;
 		this.userEmail = userEmail;
@@ -56,4 +56,5 @@ public class UserBean {
 		return "UserBean [userName=" + userName + ", userEmail=" + userEmail + ", userPassword=" + userPassword
 				+ ", userPhone=" + userPhone + "]";
 	}
+
 }

@@ -53,19 +53,21 @@ public class UserController {
 	}
 
 	@RequestMapping(value = "/userLoginProcess", method = RequestMethod.POST)
-	public ModelAndView userLogin(@RequestParam("username") String username, @RequestParam("password") String password) {
+	public ModelAndView userLogin(@RequestParam("username") String username,
+			@RequestParam("password") String password) {
 		System.out.println("In userLogin process");
 		System.out.println("Welcome " + username);
 		return new ModelAndView("Home");
 	}
 
 	@RequestMapping(value = "/adminLoginProcess", method = RequestMethod.POST)
-	public ModelAndView adminLogin(@RequestParam("adminUsername") String adminUsername, @RequestParam("adminPassword") String adminPassword) {
+	public ModelAndView adminLogin(@RequestParam("adminUsername") String adminUsername,
+			@RequestParam("adminPassword") String adminPassword) {
 		System.out.println("In adminLogin process");
 		System.out.println("Welcome " + adminUsername);
 		return new ModelAndView("AdminHome");
 	}
-	
+
 	@RequestMapping(value = "/add-user-login", method = { RequestMethod.GET, RequestMethod.POST })
 	public ModelAndView getLoginUserDetails(HttpServletRequest request, HttpServletResponse response, Model model) {
 		System.out.println("In get user details handler method inside UserController");
@@ -74,7 +76,7 @@ public class UserController {
 		model.addAttribute("user", userBean);
 		return new ModelAndView("UserLogin");
 	}
-	
+
 	@RequestMapping(value = "/add-admin-login", method = { RequestMethod.GET, RequestMethod.POST })
 	public ModelAndView getAdminUserDetails(HttpServletRequest request, HttpServletResponse response, Model model) {
 		System.out.println("In get user details handler method inside UserController");

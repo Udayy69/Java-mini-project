@@ -3,9 +3,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <title>Success Page</title>
-    
+<meta charset="UTF-8">
+<title>Success Page</title>
+
 </head>
 
 <body>
